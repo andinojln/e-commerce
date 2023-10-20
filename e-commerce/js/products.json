@@ -1,0 +1,266 @@
+[
+    {
+        "id": "coat-01",
+        "title": "Calvin Klein 1",
+        "description": "El estilo clásico de esta chaqueta lo hace perfecto para la transición entre estaciones o para usar como una pieza de capas",
+        "image": "./img/coats/01.jpg",
+        "category": {
+            "name": "Abrigos",
+            "id": "coats"
+        },
+        "price": 1000
+    },
+    {
+        "id": "coat-02",
+        "title": "Calvin Klein 2",
+        "description": "Cuenta con una capa de aislamiento interior de plumón y una capa exterior resistente al agua, que proporciona calidez adicional y bloquea las temperaturas frías",
+        "image": "./img/coats/02.jpg",
+        "category": {
+            "name": "Abrigos",
+            "id": "coats"
+        },
+        "price": 2000
+    },
+    {
+        "id": "coat-03",
+        "title": "Nautica 1",
+        "description": "Acolchado y funcional, cuenta con tejido impermeable y con una capucha que bloquea el viento para tener mayor protección contra el mal tiempo",
+        "image": "./img/coats/03.jpg",
+        "category": {
+            "name": "Abrigos",
+            "id": "coats"
+        },
+        "price": 3000
+    },
+    {
+        "id": "coat-04",
+        "title": "Nautica 2",
+        "description": "Su cuello polar, bolsillos inferiores con cremallera, logotipo en el pecho y el cierre frontal de cremallera, están diseñados para ser versátiles y adecuados para varias ocasiones",
+        "image": "./img/coats/04.jpg",
+        "category": {
+            "name": "Abrigos",
+            "id": "coats"
+        },
+        "price": 4000
+    },
+    {
+        "id": "coat-05",
+        "title": "DKNY 1",
+        "description": "Esta chaqueta proporciona una versión moderna de los clásicos atemporales, sin sacrificar la comodidad y la calidez, en poliéster elástico resistente al viento y al agua",
+        "image": "./img/coats/05.jpg",
+        "category": {
+            "name": "Abrigos",
+            "id": "coats"
+        },
+        "price": 5000
+    },
+    {
+        "id": "coat-06",
+        "title": "DKNY 2",
+        "description": "Aislamiento alternativo de plumón que da la capacidad de bloquear el calor; con un estilo de medios mixtos, hombros y cuerpo de tela ártica en un patrón acolchado para añadir estilo y funcionalidad",
+        "image": "./img/coats/06.jpg",
+        "category": {
+            "name": "Abrigos",
+            "id": "coats"
+        },
+        "price": 6000
+    },
+    {
+        "id": "coat-07",
+        "title": "HFX 1",
+        "description": "Esta chaqueta de alta calidad es fiel a la talla y está hecha de 100% poliéster, fue diseñada para la máxima comodidad; con esta característica te mantendrás seco y cálido todo el día",
+        "image": "./img/coats/07.jpg",
+        "category": {
+            "name": "Abrigos",
+            "id": "coats"
+        },
+        "price": 7000
+    },
+    {
+        "id": "coat-08",
+        "title": "HFX 2",
+        "description": "Esta chaqueta softshell es imprescindible; confeccionada en 100% poliéster, cuenta con una cremallera en la parte delantera, un bolsillo con cremallera, y una capucha",
+        "image": "./img/coats/08.jpg",
+        "category": {
+            "name": "Abrigos",
+            "id": "coats"
+        },
+        "price": 8000
+    },
+    {
+        "id": "tshirt-01",
+        "title": "Dickies",
+        "description": "Camiseta clásica de cuello redondo con bolsillo; hecha de 100% algodón de jersey tejido, grueso y suave, con costuras selladas y extra fuertes en los hombros y cuello para mayor durabilidad",
+        "image": "./img/tshirts/01.jpg",
+        "category": {
+            "name": "Camisetas",
+            "id": "tshirts"
+        },
+        "price": 1000
+    },
+    {
+        "id": "tshirt-02",
+        "title": "Champion",
+        "description": "La camiseta manga corta con cuello redondo de Champion está hecha de peso medio, 5.5 onzas. 100% algodón (Granito jaspeado: 60 % algodón, 40 % poliéster; gris Oxford: 90 % algodón, 10 % poliéster)",
+        "image": "./img/tshirts/02.jpg",
+        "category": {
+            "name": "Camisetas",
+            "id": "tshirts"
+        },
+        "price": 2000
+    },
+    {
+        "id": "tshirt-03",
+        "title": "Lee",
+        "description": "Camiseta de cuello suave sin etiquetas para reducir el roce y aumentar la comodidad, de ajuste clásico sin ser demasiado apretado ni demasiado suelto; fabricada de 61 % poliéster, 35 % rayón, y 4 % elastano",
+        "image": "./img/tshirts/03.jpg",
+        "category": {
+            "name": "Camisetas",
+            "id": "tshirts"
+        },
+        "price": 3000
+    },
+    {
+        "id": "tshirt-04",
+        "title": "Under Armour",
+        "description": "Tejido de mezcla de algodón súper suave que proporciona comodidad durante todo el día, con corte más completo para una mayor comodidad; 6% algodón y 4% poliéster",
+        "image": "./img/tshirts/04.jpg",
+        "category": {
+            "name": "Camisetas",
+            "id": "tshirts"
+        },
+        "price": 4000
+    },
+    {
+        "id": "tshirt-05",
+        "title": "Nautica",
+        "description": "Camiseta manga corta de tipo clásica con cierre de tirador, cuenta con un estilo informal de cuello redondo super cómodo; 100% algodón, lavar a máquina",
+        "image": "./img/tshirts/05.jpg",
+        "category": {
+            "name": "Camisetas",
+            "id": "tshirts"
+        },
+        "price": 5000
+    },
+    {
+        "id": "tshirt-06",
+        "title": "Columbia",
+        "description": "Esta camiseta de rendimiento está hecha para actividades al aire libre, cuenta con una tela suave de mezcla de algodón que absorbe el sudor, la atención al detalle es lo que distingue a nuestra ropa de las demás",
+        "image": "./img/tshirts/06.jpg",
+        "category": {
+            "name": "Camisetas",
+            "id": "tshirts"
+        },
+        "price": 6000
+    },
+    {
+        "id": "tshirt-07",
+        "title": "LRG 420",
+        "description": "Made in the USA and imported, cuenta con cierre de tirador, fabricada con materiales de alta calidad, LRG es esencia innovadora en cada una de sus prendas; 100% algodón",
+        "image": "./img/tshirts/07.jpg",
+        "category": {
+            "name": "Camisetas",
+            "id": "tshirts"
+        },
+        "price": 7000
+    },
+    {
+        "id": "tshirt-08",
+        "title": "Hanes",
+        "description": "El cuello redondo acanalado se coloca plano y mantiene su forma, un corte completo en estas camisetas interiores para hombre te da espacio adicional para moverte; Algodón suave y fuerte, de 6 onzas hilado en anillo",
+        "image": "./img/tshirts/08.jpg",
+        "category": {
+            "name": "Camisetas",
+            "id": "tshirts"
+        },
+        "price": 8000
+    },
+    {
+        "id": "pant-01",
+        "title": "Amazon Essentials",
+        "description": "Su tela antiarrugas, diseño frontal plano, bolsillos traseros con ribetes y botones, confieren a estos pantalones entallados un estilo a medida y confort permanente; presenta cremallera abotonada y bolsillos laterales",
+        "image": "./img/pants/01.jpg",
+        "category": {
+            "name": "Pantalones",
+            "id": "pants"
+        },
+        "price": 1000
+    },
+    {
+        "id": "pant-02",
+        "title": "Wrangler Authentics",
+        "description": "Fabricados con un ajuste holgado en la cadera y las piernas, estos jeans versátiles se ajustan en la cintura para que los sientas cómodos al hacer cualquier tarea; perfectos para el uso diario",
+        "image": "./img/pants/02.jpg",
+        "category": {
+            "name": "Pantalones",
+            "id": "pants"
+        },
+        "price": 2000
+    },
+    {
+        "id": "pant-03",
+        "title": "Buffalo David Bitton",
+        "description": "Cuenta con gran elasticidad para una mayor comodidad durante todo el día, y es una opción versátil para un aspecto elevado; 98 % Algodón, 2 % Elastano, lavar a máquina",
+        "image": "./img/pants/03.jpg",
+        "category": {
+            "name": "Pantalones",
+            "id": "pants"
+        },
+        "price": 3000
+    },
+    {
+        "id": "pant-04",
+        "title": "True Religion",
+        "description": "Jean con ajuste intermedio es bastante resistente, y cuenta con un estilo clásico pero moderno, lo que lo hace perfecto para cada ocasión del día; 70% algodón, 28% poliéster, 2% elastano",
+        "image": "./img/pants/04.jpg",
+        "category": {
+            "name": "Pantalones",
+            "id": "pants"
+        },
+        "price": 4000
+    },
+    {
+        "id": "pant-05",
+        "title": "Lee",
+        "description": "Corte recto con cintura flexible, cuenta con tela de lona elástica, bolsillos cargo con cremallera y una apertura de pierna de 16 pulgadas; 98 % Algodón, 2 % Elastano",
+        "image": "./img/pants/05.jpg",
+        "category": {
+            "name": "Pantalones",
+            "id": "pants"
+        },
+        "price": 5000
+    },
+    {
+        "id": "pant-06",
+        "title": "Levi's",
+        "description": "Quedan por debajo de la cintura, ceñido en los glúteos y piernas, lavar y secar al revés con colores similares; 99 % Algodón, 1 % Elastano",
+        "image": "./img/pants/06.jpg",
+        "category": {
+            "name": "Pantalones",
+            "id": "pants"
+        },
+        "price": 6000
+    },
+    {
+        "id": "pant-07",
+        "title": "Carhartt",
+        "description": "Pantalón cargo con cintura de malla elástica completa y cordón interior, cuenta con 2 bolsillos delanteros inclinados y bolsillos traseros con cierre de velcro; 88 % poliéster, 12 % elastano",
+        "image": "./img/pants/07.jpg",
+        "category": {
+            "name": "Pantalones",
+            "id": "pants"
+        },
+        "price": 7000
+    },
+    {
+        "id": "pant-08",
+        "title": "Under Armour",
+        "description": "Cuenta con un tejido suave, antidesgarros ligero y extremadamente duradero, sus materiales resistentes al viento y construcción te protegen de los elementos; 100 % Poliéster",
+        "image": "./img/pants/08.jpg",
+        "category": {
+            "name": "Pantalones",
+            "id": "pants"
+        },
+        "price": 8000
+    }
+]

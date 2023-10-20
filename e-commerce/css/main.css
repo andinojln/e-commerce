@@ -1,0 +1,974 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: #f3f3f3;
+}
+
+aside {
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 2rem;
+    padding-right: 0;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.089);
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.btn-menu {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    align-items: center;
+    padding: 1rem;
+    border: 0;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+}
+
+.hr-menu {
+    margin-top: 3rem;
+    width: 11.7rem;
+}
+
+.bi-arrow-left {
+    font-size: x-large;
+}
+
+.btn-menu.active {
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    box-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.171);
+    border-radius: 0.1rem 0 0 0.1rem;
+}
+
+.btn-cart {
+    margin-top: 2rem;
+}
+
+.number {
+    background-color: #000;
+    color: #fff;
+    padding: 0.15rem 0.25rem 0.2rem;
+    margin-left: 1rem;
+    border-radius: 0.2rem;
+}
+
+.footer-text {
+    font-size: 0.75rem;
+    font-weight: 350;
+    color: #7c7c7c;
+    margin-left: 1.2rem;
+    margin-bottom: -1rem;
+}
+
+main {
+    background-color: #f3f3f3;
+    margin: 2rem;
+}
+
+.main-title {
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    color: #000;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem 1rem;
+}
+
+.product-img {
+    max-width: 100%;
+    height: 13rem;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0.1rem 0.1rem 0 0;
+}
+
+.product {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: #fff;
+    gap: 0.25rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid #fff;
+}
+
+.product:hover {
+    box-shadow: 0.1em 0.3em 0.7em 0.1em rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.product-title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    font-size: small;
+    font-weight: 200;
+    color: #4e4e4e;
+    margin-top: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: auto;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+}
+
+.product-add {
+    padding: 0.5rem;
+    margin-top: auto;
+    height: 2.3rem;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    border-radius: 0.1rem 0.1rem 0.1rem 0.1rem;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.product-add:hover {
+   font-weight: 500;
+}
+
+/* ========== Shopping Cart ========== */
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.empty-cart, .purchased-cart {
+    color: #757575;
+    text-align: center;
+}
+
+.empty-cart i {
+    color: #000;
+    margin-left: 0.3rem;
+}
+
+.purchased-cart i {
+    color: #ff0000;
+    margin-left: 0.3rem;
+}
+
+.cart-products {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cart-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    box-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.144);
+}
+
+.cart-product small {
+    font-size: 0.75rem;
+}
+
+.cart-product-remove {
+    font-size: 1.7rem;
+    width: 4rem;
+    height: 4rem;
+    border: 0;
+    border-radius: 0.2rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.cart-product-remove:hover {
+    font-size: 1.9rem;
+    cursor: pointer;
+}
+
+.cart-product-img {
+    height: 4rem;
+    width: 4rem;
+    object-fit: scale-down;
+    object-position: top;
+    border-radius: 0.2rem;
+}
+
+.cart-product-title {
+    margin-left: -4rem;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-actions-empty {
+    border: 0;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.377);
+    border-radius: 0.2rem;
+    text-transform: uppercase;
+}
+
+.cart-actions-empty:hover {
+    background-color: #e63b3b;
+    cursor: pointer;
+}
+
+.cart-actions-right {
+    display: flex;
+}
+
+.cart-actions-total {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+    box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.377);
+}
+
+.cart-actions-buy {
+    border: 0;
+    padding: 1rem;
+    background-color: #ff5e00;
+    color: #fff;
+    box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.377);
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    text-transform: uppercase;
+}
+
+.cart-actions-buy:hover {
+    background-color: #ff7220;
+    cursor: pointer;
+}
+
+.header-mobile {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+}
+
+.hr-header {
+    display: none;
+}
+
+.disabled {
+    display: none;
+}
+
+/* ========== Mobile Version ========== */
+
+@media screen and (max-width: 850px) {
+    .products-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .products-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== Galaxy A51/A71 - 412 x 914 ========== */
+
+@media screen and (max-width: 412px) {
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        min-height: 100vh;
+    }
+
+    aside {
+        width: 100%;
+        padding: 0;
+        position: fixed;
+        left: 0;
+        z-index: 20;
+        background-color: #f8f8f8f5;
+        backdrop-filter: blur(0.4rem);
+        --webkit-backdrop-filter: blur(0.4rem);
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s;
+    }
+
+    .logo {
+        margin-top: 1.8rem;
+        margin-left: 0.9rem;
+    }
+
+    .hr-header {
+        display: block;
+        margin-top: 1.7rem;
+    }
+
+    aside .btn-menu {
+        width: 100%;
+        padding: 2.2rem;
+    }
+
+    aside .btn-cart {
+        padding-left: 8.8rem;
+    }
+
+    .hr-menu {
+        width: 20rem;
+        margin: auto;
+        margin-top: 0.4rem;
+    }
+
+    aside .footer-text {
+        margin-left: 7.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .aside-visible {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+    }
+
+    .main-title {
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr 1fr;
+        width: 24.6rem;
+        margin-left: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .product {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 11.8rem;
+        height: 100%;
+    }
+
+    .product-img {
+        height: 10rem;
+        width: 100%;
+    }
+
+    .product-title {
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0;
+        margin-bottom: 0.2rem;
+    }
+
+    .product-description {
+        margin-top: 0;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .product-price {
+        margin-top: 0.2rem;
+        margin-right: 0;
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .header-mobile {
+        width: 100%;
+        display: flex;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        height: 5rem;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.253);
+    }
+
+    .header-mobile .logo {
+        margin-top: 0.1rem;
+        margin-left: 0.9rem;
+    }
+
+    .open-menu {
+        text-align: center;
+        margin-right: -2rem;
+        width: 8rem;
+        height: 4.5rem;
+        background-color: transparent;
+        color: #000;
+        border-radius: 0.2rem;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        margin-right: -2rem;
+        margin-top: 0.2rem;
+        width: 8rem;
+        height: 4.5rem;
+        background-color: transparent;
+        color: #000;
+        border-radius: 0.2rem;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .btn-cart-center i {
+        padding-left: 1.2rem;
+    }
+
+    .cart-product-img {
+        margin-left: -0.8rem;
+    }
+
+    .cart-product-title {
+        font-size: x-small;
+        margin-left: -1rem;
+    }
+
+    .cart-product-subtotal {
+        display: none;
+    }
+
+    .cart-product {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .cart-actions-empty {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .cart-actions-buy {
+        margin-right: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .cart-actions-total {
+        align-items: center;
+        font-size: small;
+        margin-bottom: 2rem;
+    }
+
+    .empty-cart {
+        margin: auto;
+    }
+
+    .purchased-cart {
+        margin: auto;
+    }
+}
+
+/* ========== Galaxy A03 - 384 x 724 ========== */
+
+@media screen and (max-width: 384px) {
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    aside {
+        width: 100%;
+        padding: 0;
+        position: fixed;
+        left: 0;
+        z-index: 20;
+        background-color: #f8f8f8f5;
+        backdrop-filter: blur(0.4rem);
+        --webkit-backdrop-filter: blur(0.4rem);
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s;
+    }
+
+    .logo {
+        margin-left: 0.9rem;
+        margin-top: 1.8rem;
+    }
+
+    .hr-header {
+        margin-top: 1.7rem;
+        display: block;
+    }
+
+    aside .btn-menu {
+        width: 100%;
+        padding: 2.2rem;
+    }
+
+    aside .btn-cart {
+        padding-left: 8.3rem;
+    }
+
+    .hr-menu {
+        width: 20rem;
+        margin: auto;
+        margin-top: 0.4rem;
+    }
+
+    aside .footer-text {
+        margin-bottom: 1rem;
+        margin-left: 7.4rem;
+    }
+
+    .aside-visible {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+    }
+
+    .main-title {
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr 1fr;
+        width: 23rem;
+        margin-left: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .product {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 11rem;
+        height: 100%;
+    }
+
+    .product-img {
+        height: 10rem;
+        width: 100%;
+    }
+
+    .product-title {
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0;
+        margin-bottom: 0.2rem;
+    }
+
+    .product-description {
+        margin-top: 0;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .product-price {
+        margin-top: 0.2rem;
+        margin-right: 0;
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .header-mobile {
+        width: 100%;
+        display: flex;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        height: 5rem;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.253);
+    }
+
+    .header-mobile .logo {
+        margin-top: 0.1rem;
+        margin-left: 0.9rem;
+    }
+
+    .open-menu {
+        text-align: center;
+        margin-right: -2rem;
+        width: 8rem;
+        height: 4.5rem;
+        background-color: transparent;
+        color: #000;
+        border-radius: 0.2rem;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        margin-right: -2rem;
+        margin-top: 0.2rem;
+        width: 8rem;
+        height: 4.5rem;
+        background-color: transparent;
+        color: #000;
+        border-radius: 0.2rem;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .btn-cart-center i {
+       padding-left: 1.2rem;
+    }
+
+    .cart-product-subtotal {
+        display: none;
+    }
+
+    .cart-product {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .cart-actions-empty {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .cart-actions-buy {
+        margin-right: 0.5rem;
+    }
+
+    .cart-actions-total {
+        align-items: center;
+        font-size: small;
+    }
+
+    .empty-cart {
+        margin: auto;
+    }
+
+    .purchased-cart {
+        margin: auto;
+    }
+}
+
+/* ========== Galaxy S8+ - 360 x 740 ========== */
+
+@media screen and (max-width: 360px) {
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        min-height: 100vh;
+    }
+
+    aside {
+        width: 100%;
+        padding: 0;
+        position: fixed;
+        left: 0;
+        z-index: 20;
+        background-color: #f8f8f8f5;
+        backdrop-filter: blur(0.4rem);
+        --webkit-backdrop-filter: blur(0.4rem);
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s;
+    }
+
+    .logo {
+        margin-left: 0.9rem;
+        margin-top: 1.8rem;
+    }
+
+    .hr-header {
+        margin-top: 1.7rem;
+        display: block;
+    }
+
+    aside .btn-menu {
+        width: 100%;
+        padding: 2.2rem;
+    }
+
+    aside .btn-cart {
+        padding-left: 7.2rem;
+    }
+
+    .hr-menu {
+        width: 20rem;
+        margin: auto;
+        margin-top: 0.4rem;
+    }
+
+    aside .footer-text {
+        margin-bottom: 1rem;
+        margin-left: 6.5rem;
+    }
+
+    .aside-visible {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+    }
+
+    .main-title {
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr;
+        width: 22.5rem;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .product {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 18rem;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-img {
+        height: 18rem;
+    }
+
+    .product-title {
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0;
+        margin-bottom: 0.2rem;
+    }
+
+    .product-description {
+        margin-top: 0;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .product-price {
+        margin-top: 0.2rem;
+        margin-left: 0.5rem;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-add {
+        height: 3rem;
+    }
+
+    .header-mobile {
+        width: 100%;
+        display: flex;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        height: 5rem;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.253);
+    }
+
+    .header-mobile .logo {
+        margin-top: 0.1rem;
+        margin-left: 0.9rem;
+    }
+
+    .open-menu {
+        text-align: center;
+        margin-right: -2rem;
+        width: 8rem;
+        height: 4.5rem;
+        background-color: transparent;
+        color: #000;
+        border-radius: 0.2rem;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        margin-right: -2rem;
+        margin-top: 0.2rem;
+        width: 8rem;
+        height: 4.5rem;
+        background-color: transparent;
+        color: #000;
+        border-radius: 0.2rem;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .btn-cart-center i {
+       padding-left: 1.2rem;
+    }
+
+    .cart-product-img {
+        margin-left: -1.1rem;
+        height: 3rem;
+    }
+
+    .cart-product-subtotal {
+        display: none;
+    }
+
+    .cart-product {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .cart-actions-empty {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .cart-actions-buy {
+        margin-right: 0.5rem;
+    }
+
+    .cart-actions-total {
+        align-items: center;
+        font-size: small;
+    }
+
+    .empty-cart {
+        margin: auto;
+    }
+
+    .purchased-cart {
+        margin: auto;
+    }
+}
